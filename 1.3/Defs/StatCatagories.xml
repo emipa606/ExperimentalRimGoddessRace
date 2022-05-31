@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <StatCategoryDef>
+    <defName>RTN_StatCatagory_GoddessAbility</defName>
+    <label>Ability</label>
+    <displayOrder>160</displayOrder>
+  </StatCategoryDef>
+</Defs>

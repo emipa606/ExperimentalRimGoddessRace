@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef>
+    <label>Goddess</label>
+    <defName>RTN_PawnKind_Goddess</defName>
+    <race>RTN_Thing_Goddess</race>
+    <combatPower>45</combatPower>
+    <defaultFactionType>RTN_FactionDef_Goddess</defaultFactionType>
+    <backstoryCategories>
+      <li>Civil</li>
+    </backstoryCategories>
+  </PawnKindDef>
+</Defs>

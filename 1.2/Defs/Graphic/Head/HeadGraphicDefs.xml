@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RimGoddess.Race.Definition.HeadGraphicDef>
+    <defName>RTN_HeadGraphic_Halo</defName>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5, 1.5)</drawSize>
+      <drawOffset>(0.0, 0.2, 0.4)</drawOffset>
+      <texPath>Things/Pawn/Attachment/Head/Halo</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </RimGoddess.Race.Definition.HeadGraphicDef>
+  <RimGoddess.Race.Definition.HeadGraphicDef>
+    <defName>RTN_HeadGraphic_SpikedCrown</defName>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5, 1.5)</drawSize>
+      <drawOffset>(0.0, 0.2, 0.4)</drawOffset>
+      <texPath>Things/Pawn/Attachment/Head/SpikedCrown</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </RimGoddess.Race.Definition.HeadGraphicDef>
+  <RimGoddess.Race.Definition.HeadGraphicDef>
+    <defName>RTN_HeadGraphic_CrownOfThorns</defName>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5, 1.5)</drawSize>
+      <drawOffset>(0.0, 0.2, 0.5)</drawOffset>
+      <texPath>Things/Pawn/Attachment/Head/CrownofThorns</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </RimGoddess.Race.Definition.HeadGraphicDef>
+</Defs>

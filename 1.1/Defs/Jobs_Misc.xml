@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>RTN_Job_AbsorbFaithBooster</defName>
+    <driverClass>RimGoddess.Base.JobDriver_AbsorbFaithBooster</driverClass>
+    <casualInterruptible>false</casualInterruptible>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>RTN_Thing_FaithCrystaliser</defName>
+    <label>Faith Crystaliser</label>
+    <description>This allow the conversion of faith into a crystalised form. The process is largely unknown as to how it works and all attempts at making the process more efficent have been futile.</description>
+    <thingClass>RimGoddess.Race.BuildingFaithCrystaliser</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3, 3)</drawSize>
+      <drawOffset>(0, 0, 0.5)</drawOffset>
+      <texPath>Things/Buildings/FaithCrystaliser</texPath>
+    </graphicData>
+    <costList>
+      <RTN_Thing_FaithCrystal>10</RTN_Thing_FaithCrystal>
+      <ComponentSpacer>5</ComponentSpacer>
+      <Steel>500</Steel>
+      <Plasteel>250</Plasteel>
+    </costList>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>12000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>50</Beauty>
+    </statBases>
+    <placeWorkers>
+      <li>RimGoddess.Race.PlacementWorker.PlaceWorkerFaithCrystaliser</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>False</useHitPoints>
+    <size>(3,2)</size>
+    <designationCategory>RTN_DesignationCatagory_RimGoddess</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <drawGUIOverlay>True</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <designationHotKey>Misc1</designationHotKey>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RTN_ResearchProject_FaithCrystaliser</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

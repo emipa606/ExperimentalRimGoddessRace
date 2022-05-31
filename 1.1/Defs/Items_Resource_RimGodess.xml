@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>RTN_Thing_FaithCrystal</defName>
+    <label>Faith Crystal</label>
+    <description>A crystalisation of the faith of the people in a Goddess. It can be used to provide faith to a Goddess or to craft Goddess related items.</description>
+    <graphicData>
+      <texPath>Things/Items/FaithCrystal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>2000</MarketValue>
+      <Mass>0.6</Mass>
+      <Flammability>0.6</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <comps>
+      <li Class="RimGoddess.Base.CompProperties_FaithBooster" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(50,50,125,0)</glowColor>
+      </li>
+    </comps>
+    <intricate>true</intricate>
+    <tradeTags>
+      <li>RTN_TradeTag_GoddessExotic</li>
+    </tradeTags>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+  </ThingDef>
+</Defs>

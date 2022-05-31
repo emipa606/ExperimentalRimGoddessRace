@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RimGoddess.Race.Definition.PawnStyleDef>
+    <defName>RTN_PawnStyle_Scaled</defName>
+    <headGraphic>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Pawn/Head/Scaled</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </headGraphic>
+    <femaleBodyGraphic>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Pawn/Body/Female/Scaled</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </femaleBodyGraphic>
+    <thinBodyGraphic>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Pawn/Body/Thin/Scaled</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </thinBodyGraphic>
+  </RimGoddess.Race.Definition.PawnStyleDef>
+</Defs>

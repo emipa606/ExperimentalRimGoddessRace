@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RimGoddess.Race.Definition.BackGraphicDef>
+    <defName>RTN_BackGraphic_Wings</defName>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Pawn/Attachment/Back/Wings</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </RimGoddess.Race.Definition.BackGraphicDef>
+  <RimGoddess.Race.Definition.BackGraphicDef>
+    <defName>RTN_BackGraphic_Blades</defName>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2, 2)</drawSize>
+      <texPath>Things/Pawn/Attachment/Back/Blades</texPath>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </RimGoddess.Race.Definition.BackGraphicDef>
+  <RimGoddess.Race.Definition.BackGraphicDef>
+    <defName>RTN_BackGraphic_BatWings</defName>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Pawn/Attachment/Back/BatWings</texPath>
+      <drawSize>(1.25, 1.25)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </RimGoddess.Race.Definition.BackGraphicDef>
+</Defs>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Def>
+  <Backstory>
+    <identifier>RTN_Backstory_YoungGoddess</identifier>
+    <slot>Childhood</slot>
+    <title>Young Goddess</title>
+    <titleFemale>Young Goddess</titleFemale>
+    <titleShort>Goddess</titleShort>
+    <titleShortFemale>Goddess</titleShortFemale>
+    <baseDesc>Born into the world from the wishes of [PAWN_possessive] people. [PAWN_nameDef] spent [PAWN_possessive] time learning to serve [PAWN_possessive] people and trying to the best of [PAWN_possessive] ability to fullfill their wishes.</baseDesc>
+    <skillGains>
+      <li>
+        <key>Social</key>
+        <value>8</value>
+      </li>
+      <li>
+        <key>Intellectual</key>
+        <value>4</value>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Raider</li>
+      <li>Slave</li>
+      <li>Trader</li>
+      <li>Traveler</li>
+    </spawnCategories>
+  </Backstory>
+</Def>

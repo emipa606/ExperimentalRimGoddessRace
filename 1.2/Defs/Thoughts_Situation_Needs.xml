@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>RTN_ThoughtDef_Faith</defName>
+    <workerClass>RimGoddess.Race.ThoughtWorkerFaith</workerClass>
+    <stages>
+      <li>
+        <label>Faith deprived</label>
+        <description>I lack faith. I feel my body numbing.</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+      <li>
+        <label>Faith depleted</label>
+        <description>I am out of faith. I can feel myself fading away.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

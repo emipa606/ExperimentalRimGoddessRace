@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>RTN_Thing_FaithPedestal</defName>
+    <label>Faith Pedestal</label>
+    <description>A Faith Pedestal that acts as a conduit for the Goddesses power. It converts the peoples faith into power for the Goddess. 
+    
+If one where to try and create a Goddess without one it would require belief on a immesureable scale that is almost impossible and there is only one recorded event in history.
+
+Should the Goddess have an excess of faith she will use it to summon a Handmaiden to assist in her duties and allow further growth.</description>
+    <thingClass>RimGoddess.Race.BuildingFaithPedestal</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3, 3)</drawSize>
+      <texPath>Things/Buildings/FaithPedestal</texPath>
+    </graphicData>
+    <costList>
+      <RTN_Thing_FaithCrystal>1</RTN_Thing_FaithCrystal>
+      <ComponentSpacer>10</ComponentSpacer>
+      <Steel>1000</Steel>
+      <Plasteel>500</Plasteel>
+    </costList>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>12000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>50</Beauty>
+    </statBases>
+    <placeWorkers>
+      <li>RimGoddess.Race.PlacementWorker.PlaceWorkerFaithPedestal</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(100,100,250,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(200,200,200,0)</glowColor>
+      </li>
+    </comps>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>False</useHitPoints>
+    <size>(3,3)</size>
+    <designationCategory>RTN_DesignationCatagory_RimGoddess</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <drawGUIOverlay>True</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <designationHotKey>Misc1</designationHotKey>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RTN_ResearchProject_GoddessBasics</li>
+    </researchPrerequisites>
+    <building>
+      <blueprintClass>RimGoddess.Race.BlueprintFaithPedestal</blueprintClass>
+    </building>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>RTN_Hediff_FaithDeprivation</defName>
+    <defaultLabelColor>(0.1, 0.9, 0.1)</defaultLabelColor>
+    <label>Faith deprivation</label>
+    <description>A lack of faith in the goddess. Short periods result in minor effects however extends periods may lead to death. It is recommended to use a faith crystal and/or restore the peoples faith in the Godess.</description>
+    <lethalSeverity>1</lethalSeverity>
+    <stages>
+      <li>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
+        <painOffset>0.05</painOffset>
+      </li>
+      <li>
+        <label>initial</label>
+        <minSeverity>0.04</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>minor</label>
+        <socialFightChanceFactor>1.5</socialFightChanceFactor>
+        <minSeverity>0.2</minSeverity>
+        <painOffset>0.15</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>serious</label>
+        <socialFightChanceFactor>2.5</socialFightChanceFactor>
+        <minSeverity>0.35</minSeverity>
+        <painOffset>0.35</painOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>extreme</label>
+        <socialFightChanceFactor>3.5</socialFightChanceFactor>
+        <minSeverity>0.62</minSeverity>
+        <lifeThreatening>true</lifeThreatening>
+        <painOffset>0.5</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <defName>RTN_Hediff_FaithLink</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Faith link</label>
+    <labelNoun>a Faith link</labelNoun>
+    <description>A faith link between a divine being and her faithful animal that grants the animal increased power.</description>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsOnDeath">
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.20</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.30</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.30</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>0.20</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>0.20</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.50</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

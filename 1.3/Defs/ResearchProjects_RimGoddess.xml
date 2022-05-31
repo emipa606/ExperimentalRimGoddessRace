@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef Name="RTN_ResearchProjectBase_RimGoddess" Abstract="True">
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <tab>RTN_ResearchTab_RimGoddess</tab>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="RTN_ResearchProjectBase_RimGoddess">
+    <defName>RTN_ResearchProject_GoddessBasics</defName>
+    <label>Goddess Basics</label>
+    <description>The entry point to RimGoddess. Allows the construction of the Faith Pedestal to create a Goddess for your colony.</description>
+    <baseCost>5000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>AdvancedFabrication</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0.5</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="RTN_ResearchProjectBase_RimGoddess">
+    <defName>RTN_ResearchProject_EnergyConverter</defName>
+    <label>Energy Conversion</label>
+    <description>Allows the construction of the Energy Converter that turns Power into Faith.</description>
+    <baseCost>4000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>RTN_ResearchProject_GoddessBasics</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef ParentName="RTN_ResearchProjectBase_RimGoddess">
+    <defName>RTN_ResearchProject_FaithCrystaliser</defName>
+    <label>Faith Crystalization</label>
+    <description>Gain the ability to turn faith into a crystal form.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <prerequisites>
+      <li>RTN_ResearchProject_GoddessBasics</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+</Defs>

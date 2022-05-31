@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <LifeStageDef>
+    <defName>RTN_LifeStage_GoddessYoung</defName>
+    <label>teenager</label>
+    <visible>false</visible>
+    <adjective>teenage</adjective>
+    <reproductive>true</reproductive>
+    <bodySizeFactor>0.75</bodySizeFactor>
+    <healthScaleFactor>0.90</healthScaleFactor>
+    <meleeDamageFactor>0.75</meleeDamageFactor>
+    <statFactors>
+      <MoveSpeed>0.95</MoveSpeed>
+    </statFactors>
+  </LifeStageDef>
+  <LifeStageDef>
+    <defName>RTN_LifeStage_GoddessAdult</defName>
+    <label>adult</label>
+    <visible>false</visible>
+    <bodySizeFactor>0.85</bodySizeFactor>
+    <reproductive>true</reproductive>
+  </LifeStageDef>
+  <LifeStageDef>
+    <defName>RTN_LifeStage_GoddessTransformedYoung</defName>
+    <label>teenager</label>
+    <visible>false</visible>
+    <adjective>teenage</adjective>
+    <reproductive>true</reproductive>
+    <healthScaleFactor>0.90</healthScaleFactor>
+    <bodySizeFactor>0.85</bodySizeFactor>
+    <meleeDamageFactor>0.75</meleeDamageFactor>
+    <statFactors>
+      <MoveSpeed>0.95</MoveSpeed>
+    </statFactors>
+  </LifeStageDef>
+  <LifeStageDef>
+    <defName>RTN_LifeStage_GoddessTransformedAdult</defName>
+    <label>adult</label>
+    <visible>false</visible>
+    <reproductive>true</reproductive>
+  </LifeStageDef>
+</Defs>

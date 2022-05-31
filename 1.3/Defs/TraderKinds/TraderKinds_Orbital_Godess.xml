@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraderKindDef>
+    <defName>RTN_TraderKind_GoddessOrbital</defName>
+    <label>Goddess goods trader</label>
+    <commonality>1</commonality>
+    <orbital>true</orbital>
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>2000~4000</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentIndustrial</thingDef>
+        <countRange>5~30</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentSpacer</thingDef>
+        <countRange>3~8</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Plasteel</thingDef>
+        <countRange>100~400</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>MedicineUltratech</thingDef>
+        <countRange>5~30</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>RTN_Thing_FaithCrystal</thingDef>
+        <countRange>2~5</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Hyperweave</thingDef>
+        <countRange>100~400</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Synthread</thingDef>
+        <countRange>200~500</countRange>
+      </li>
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+    </stockGenerators>
+  </TraderKindDef>
+</Defs>

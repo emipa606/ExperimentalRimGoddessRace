@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Def>
+  <Backstory>
+    <identifier>RTN_Backstory_LoyalHandMaiden</identifier>
+    <slot>Childhood</slot>
+    <title>Loyal Handmaiden</title>
+    <titleFemale>Loyal Handmaiden</titleFemale>
+    <titleShort>Handmaiden</titleShort>
+    <titleShortFemale>Handmaiden</titleShortFemale>
+    <baseDesc>Born to serve [PAWN_possessive] Godess. [PAWN_nameDef] commits the majority of [PAWN_possessive] time in the shadow of the Godess taking on the will of the Godess as [PAWN_possessive] her own.</baseDesc>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Raider</li>
+      <li>Slave</li>
+      <li>Trader</li>
+      <li>Traveler</li>
+    </spawnCategories>
+  </Backstory>
+</Def>

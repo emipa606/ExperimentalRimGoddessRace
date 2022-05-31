@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <StatDef>
+    <defName>RTN_Stat_CastingTime</defName>
+    <label>Casting time</label>
+    <category>RTN_StatCatagory_GoddessAbility</category>
+    <description>How long it takes to perform this ability.</description>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <formatString>{0} s</formatString>
+    <toStringStyle>FloatOne</toStringStyle>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>2003</displayPriorityInCategory>
+  </StatDef>
+  <StatDef>
+    <defName>RTN_Stat_FaithCost</defName>
+    <label>Faith Cost</label>
+    <category>RTN_StatCatagory_GoddessAbility</category>
+    <description>How much faith will be lost as a result of performing this ability.</description>
+    <defaultBaseValue>5</defaultBaseValue>
+    <minValue>0</minValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>2002</displayPriorityInCategory>
+  </StatDef>
+  <StatDef>
+    <defName>RTN_Stat_AbilityRange</defName>
+    <label>Range</label>
+    <category>RTN_StatCatagory_GoddessAbility</category>
+    <description>The maximum distance to a target of this ability, or to the center of the target location.</description>
+    <defaultBaseValue>25</defaultBaseValue>
+    <minValue>0</minValue>
+    <hideAtValue>0</hideAtValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>2001</displayPriorityInCategory>
+  </StatDef>
+  <StatDef>
+    <defName>RTN_Stat_EffectDuration</defName>
+    <label>Duration</label>
+    <category>RTN_StatCatagory_GoddessAbility</category>
+    <description>How long the effects of this ability last.</description>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <hideAtValue>0</hideAtValue>
+    <formatString>{0} s</formatString>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1999</displayPriorityInCategory>
+  </StatDef>
+  <StatDef>
+    <defName>RTN_Stat_EffectRadius</defName>
+    <label>Effect Radius</label>
+    <category>RTN_StatCatagory_GoddessAbility</category>
+    <description>The radius of the area of effect of this ability.</description>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <hideAtValue>0</hideAtValue>
+    <showIfUndefined>false</showIfUndefined>
+    <displayPriorityInCategory>1998</displayPriorityInCategory>
+  </StatDef>
+</Defs>

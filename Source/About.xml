@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>[Experimental]RimGoddess - Race</name>
+  <author>Blade of Debt</author>
+  <supportedVersions>
+    <li>1.1</li>
+    <li>1.2</li>
+  </supportedVersions>
+  <packageId>BladeOfDebt.RimGoddess.RaceEx</packageId>
+  <description>Adds a Goddess Race and new Faction to Rimworld. The Goddess can transform to enhance their power and utilise new abilities.</description>
+</ModMetaData>
