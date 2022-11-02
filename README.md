@@ -36,7 +36,8 @@ These are the primary resource of the mod and are acquired primarily through tra
 
 # RimGoddess - Equipment
 
-https://steamcommunity.com/sharedfiles/filedetails/?id=2114625759
+[strike]https://steamcommunity.com/sharedfiles/filedetails/?id=2114625759[/strike]
+https://steamcommunity.com/sharedfiles/filedetails/?id=2815298155
 
 ![Image](https://i.imgur.com/PwoNOj4.png)
 

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <NeedDef>
+    <defName>RTN_Need_Faith</defName>
+    <needClass>RimGoddess.Race.NeedFaith</needClass>
+    <label>Faith</label>
+    <minIntelligence>Humanlike</minIntelligence>
+    <description>Faith represents the people belief in the Goddess and what power their abilities. Should this reach zero the Goddess will enter a state of Faith deprivation leading to death.</description>
+    <listPriority>600</listPriority>
+    <onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <major>true</major>
+    <showForCaravanMembers>true</showForCaravanMembers>
+  </NeedDef>
+</Defs>

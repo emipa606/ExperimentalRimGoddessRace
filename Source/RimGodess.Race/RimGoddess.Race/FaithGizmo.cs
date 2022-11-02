@@ -17,7 +17,7 @@ public class FaithGizmo : Gizmo
     public FaithGizmo(NeedFaith a_faith)
     {
         m_faithNeed = a_faith;
-        order = -200f;
+        base.Order = -200f;
     }
 
     public override float GetWidth(float a_maxWidth)

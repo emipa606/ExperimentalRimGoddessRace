@@ -15,7 +15,7 @@ internal class Command_GoddessAbility : Command
     {
         var def = a_goddessAbility.def;
         m_goddessAbility = a_goddessAbility;
-        order = 6f;
+        base.Order = 6f;
         defaultLabel = def.LabelCap;
         hotKey = def.HotKey;
         icon = def.UiIcon;

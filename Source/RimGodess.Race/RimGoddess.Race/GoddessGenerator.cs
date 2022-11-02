@@ -30,9 +30,11 @@ public class GoddessGenerator : IGPawnGenerator
         goddessPawn.gender = Gender.Female;
         goddessPawn.ageTracker.AgeBiologicalTicks = 0L;
         goddessPawn.needs.SetInitialLevels();
-        goddessPawn.story.melanin = PawnSkinColors.RandomMelanin(a_faction);
-        goddessPawn.story.crownType = Rand.Value < 0.5f ? CrownType.Average : CrownType.Narrow;
-        goddessPawn.story.hairColor = Color.red;
+        goddessPawn.story.skinColorOverride = PawnSkinColors.GetSkinColor(a_faction.colorFromSpectrum);
+        goddessPawn.story.headType = Rand.Value < 0.5f
+            ? DefDatabase<HeadTypeDef>.GetNamedSilentFail("Female_AverageNormal")
+            : DefDatabase<HeadTypeDef>.GetNamedSilentFail("Female_NarrowNormal");
+        goddessPawn.story.HairColor = Color.red;
         goddessPawn.story.hairDef = PawnStyleItemChooser.RandomHairFor(goddessPawn);
         goddessPawn.story.bodyType = Rand.Value < 0.5f ? BodyTypeDefOf.Female : BodyTypeDefOf.Thin;
         goddessPawn.health.Reset();
@@ -40,7 +42,7 @@ public class GoddessGenerator : IGPawnGenerator
         goddessPawn.needs.AddOrRemoveNeedsAsAppropriate();
         if (a_baseGoddess == null)
         {
-            goddessPawn.story.childhood = InternalBackstoryDatabase.RandomGoddessBackstory(BackstorySlot.Childhood);
+            goddessPawn.story.Childhood = InternalBackstoryDatabase.RandomGoddessBackstory(BackstorySlot.Childhood);
             GenerateTraits(goddessPawn);
             GenerateSkills(goddessPawn);
             goddessPawn.IsMaiden = false;
@@ -48,7 +50,7 @@ public class GoddessGenerator : IGPawnGenerator
         }
         else
         {
-            goddessPawn.story.childhood = InternalBackstoryDatabase.RandomMaidenBackstory(BackstorySlot.Childhood);
+            goddessPawn.story.Childhood = InternalBackstoryDatabase.RandomMaidenBackstory(BackstorySlot.Childhood);
             GenerateTraits(goddessPawn);
             GenerateSkills(goddessPawn);
             goddessPawn.IsMaiden = true;
@@ -118,14 +120,14 @@ public class GoddessGenerator : IGPawnGenerator
             }
 
             var degree = PawnGenerator.RandomTraitDegree(newTraitDef);
-            if (a_pawn.story.childhood != null && a_pawn.story.childhood.DisallowsTrait(newTraitDef, degree) ||
-                a_pawn.story.adulthood != null && a_pawn.story.adulthood.DisallowsTrait(newTraitDef, degree))
+            if (a_pawn.story.Childhood != null && a_pawn.story.Childhood.DisallowsTrait(newTraitDef, degree) ||
+                a_pawn.story.Adulthood != null && a_pawn.story.Adulthood.DisallowsTrait(newTraitDef, degree))
             {
                 continue;
             }
 
             var trait = new Trait(newTraitDef, degree);
-            if (a_pawn.mindState == null || a_pawn.mindState.mentalBreaker == null ||
+            if (a_pawn.mindState?.mentalBreaker == null ||
                 !((a_pawn.mindState.mentalBreaker.BreakThresholdMinor +
                    trait.OffsetOfStat(StatDefOf.MentalBreakThreshold)) *
                     trait.MultiplierOfStat(StatDefOf.MentalBreakThreshold) > 0.5f))
@@ -170,7 +172,7 @@ public class GoddessGenerator : IGPawnGenerator
         float num = Rand.RangeInclusive(0, 4);
         foreach (var item in a_pawn.story.AllBackstories.Where(bs => bs != null))
         {
-            foreach (var item2 in item.skillGainsResolved)
+            foreach (var item2 in item.skillGains)
             {
                 if (item2.Key == a_sk)
                 {

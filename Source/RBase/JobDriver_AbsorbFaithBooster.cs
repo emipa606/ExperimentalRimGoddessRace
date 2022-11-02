@@ -39,10 +39,7 @@ public class JobDriver_AbsorbFaithBooster : JobDriver
                     iGPawn.AddReserveFaith(1000f);
                 }
 
-                if (thing2.def.soundInteract != null)
-                {
-                    thing2.def.soundInteract.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
-                }
+                thing2.def.soundInteract?.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map));
             }
         };
     }

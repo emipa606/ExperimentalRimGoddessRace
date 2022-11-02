@@ -80,18 +80,12 @@ public class GoddessPawn : Pawn, IGPawn
 
     public void AddAbility(IGoddessAbilityDef a_def)
     {
-        if (GoddessAbilityController != null)
-        {
-            GoddessAbilityController.AddAbility(a_def as GoddessAbilityDef);
-        }
+        GoddessAbilityController?.AddAbility(a_def as GoddessAbilityDef);
     }
 
     public void RemoveAbility(IGoddessAbilityDef a_def)
     {
-        if (GoddessAbilityController != null)
-        {
-            GoddessAbilityController.RemoveAbility(a_def as GoddessAbilityDef);
-        }
+        GoddessAbilityController?.RemoveAbility(a_def as GoddessAbilityDef);
     }
 
     public bool SubtractFaith(float a_amount)
@@ -129,9 +123,8 @@ public class GoddessPawn : Pawn, IGPawn
                 Name = new NameSingle(text),
                 BodyType = Rand.Value < 0.5f ? BodyTypeDefOf.Female : BodyTypeDefOf.Thin,
                 Hair = PawnStyleItemChooser.RandomHairFor(this),
-                HairColor = PawnHairColors.RandomHairColor(story.SkinColor, ageTracker.AgeBiologicalYears),
-                HeadGraphicPath = GraphicDatabaseHeadRecords
-                    .GetHeadRandom(Gender.Female, story.SkinColor, story.crownType, false).GraphicPath,
+                HairColor = PawnHairColors.RandomHairColor(this, story.SkinColor, ageTracker.AgeBiologicalYears),
+                HeadGraphicPath = story.headType.GetGraphic(story.SkinColor).GraphicPath,
                 PawnStyleDef = null
             };
         }
@@ -189,8 +182,7 @@ public class GoddessPawn : Pawn, IGPawn
                 BodyType = Rand.Value < 0.5f ? BodyTypeDefOf.Female : BodyTypeDefOf.Thin,
                 Hair = PawnStyleItemChooser.RandomHairFor(this),
                 HairColor = GoddessDescriptionGenerator.GetColor(text),
-                HeadGraphicPath = GraphicDatabaseHeadRecords
-                    .GetHeadRandom(Gender.Female, story.SkinColor, story.crownType, false).GraphicPath
+                HeadGraphicPath = story.headType.GetGraphic(story.SkinColor).GraphicPath
             };
             if (Rand.Chance(0.25f))
             {
@@ -235,7 +227,7 @@ public class GoddessPawn : Pawn, IGPawn
         Name = a_details.Name;
         story.bodyType = a_details.BodyType;
         story.hairDef = a_details.Hair;
-        story.hairColor = a_details.HairColor;
+        story.HairColor = a_details.HairColor;
         Drawer.renderer.graphics.ResolveAllGraphics();
         if (a_details.PawnStyleDef != null)
         {
@@ -274,10 +266,9 @@ public class GoddessPawn : Pawn, IGPawn
         else
         {
             Drawer.renderer.graphics.headGraphic =
-                GraphicDatabaseHeadRecords.GetHeadNamed(a_details.HeadGraphicPath, story.SkinColor, false);
+                story.headType.GetGraphic(story.SkinColor, false, story.SkinColorOverriden);
             Drawer.renderer.graphics.desiccatedHeadGraphic =
-                GraphicDatabaseHeadRecords.GetHeadNamed(a_details.HeadGraphicPath, PawnGraphicSet.RottingColorDefault,
-                    false);
+                story.headType.GetGraphic(PawnGraphicSet.RottingColorDefault, true, story.SkinColorOverriden);
         }
     }
 
@@ -411,11 +402,11 @@ public class GoddessPawn : Pawn, IGPawn
     public override void ExposeData()
     {
         m_recentLoad = true;
-        Backstory backstory = null;
+        BackstoryDef backstory = null;
         if (story != null)
         {
-            backstory = story.childhood;
-            story.childhood = null;
+            backstory = story.Childhood;
+            story.Childhood = null;
         }
 
         var value = string.Empty;
@@ -441,7 +432,7 @@ public class GoddessPawn : Pawn, IGPawn
 
         if (story != null)
         {
-            story.childhood = m_childhoodHandmaiden
+            story.Childhood = m_childhoodHandmaiden
                 ? InternalBackstoryDatabase.GetMaidenBackstory(value)
                 : InternalBackstoryDatabase.GetGoddessBackstory(value);
         }

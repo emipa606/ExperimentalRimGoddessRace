@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RimGoddess.Race.GoddessAbilityDef Name="RTN_GoddessAbilityBase_BaseAbility" Abstract="True">
+    <statBases>
+      <Ability_Duration>0</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <verbClass>RimGoddess.Base.Verb_CastGoddessAbility</verbClass>
+      <range>25</range>
+      <requireLineOfSight>True</requireLineOfSight>
+      <warmupTime>1</warmupTime>
+      <targetParams>
+        <canTargetBuildings>False</canTargetBuildings>
+        <canTargetAnimals>False</canTargetAnimals>
+        <thingCategory>Item</thingCategory>
+        <mapObjectTargetsMustBeAutoAttackable>False</mapObjectTargetsMustBeAutoAttackable>
+      </targetParams>
+    </verbProperties>
+  </RimGoddess.Race.GoddessAbilityDef>
+  <RimGoddess.Race.GoddessAbilityDef Parent="RTN_GoddessAbilityBase_BaseAbility">
+    <abilityClass>RimGoddess.Race.HolyFireAbility</abilityClass>
+    <defName>RTN_GoddessAbility_HolyFire</defName>
+    <label>Holy Fire</label>
+    <iconPath>Abilities/Holy_Fire</iconPath>
+    <description>Causes the target to spontaneously combust.</description>
+    <hotKey>Misc1</hotKey>
+    <statBases>
+      <RTN_Stat_FaithCost>20</RTN_Stat_FaithCost>
+    </statBases>
+    <verbProperties>
+      <warmupTime>1</warmupTime>
+      <range>15</range>
+      <targetParams>
+        <canTargetAnimals>True</canTargetAnimals>
+      </targetParams>
+    </verbProperties>
+  </RimGoddess.Race.GoddessAbilityDef>
+</Defs>

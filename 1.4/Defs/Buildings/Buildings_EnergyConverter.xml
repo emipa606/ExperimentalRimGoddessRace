@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>RTN_Thing_EnergyConverter</defName>
+    <label>Energy Converter</label>
+    <description>The energy converter is an extension for the Faith Pedestal that allows the Faith Pedestal to convert power into faith. This disables the Faith Pedestals ability to convert the Goddesses relations into Faith in addition to greatly reducing Faith storage. 
+    
+This disables the ability to generate a Handmaiden.</description>
+    <thingClass>RimGoddess.Race.BuildingEnergyConverter</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3, 3)</drawSize>
+      <texPath>Things/Buildings/EnergyConverter</texPath>
+    </graphicData>
+    <costList>
+      <RTN_Thing_FaithCrystal>3</RTN_Thing_FaithCrystal>
+      <ComponentSpacer>5</ComponentSpacer>
+      <ComponentIndustrial>10</ComponentIndustrial>
+      <Steel>750</Steel>
+      <Plasteel>500</Plasteel>
+    </costList>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToBuild>12000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Beauty>50</Beauty>
+    </statBases>
+    <placeWorkers>
+      <li>RimGoddess.Race.PlacementWorker.PlaceWorkerEnergyConverter</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>5000</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <useHitPoints>False</useHitPoints>
+    <size>(3,1)</size>
+    <designationCategory>RTN_DesignationCatagory_RimGoddess</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <drawGUIOverlay>True</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <designationHotKey>Misc1</designationHotKey>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>RTN_ResearchProject_EnergyConverter</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

@@ -169,11 +169,6 @@ public class GoddessAbility : IVerbOwner, IExposable
 
     public virtual Command GetGizmo()
     {
-        if (gizmo == null)
-        {
-            return new Command_GoddessAbility(this);
-        }
-
-        return gizmo;
+        return gizmo ?? new Command_GoddessAbility(this);
     }
 }

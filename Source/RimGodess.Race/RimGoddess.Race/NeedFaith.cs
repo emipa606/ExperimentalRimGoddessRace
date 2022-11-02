@@ -137,7 +137,7 @@ public class NeedFaith : Need
 
 
     public override void DrawOnGUI(Rect a_rect, int a_maxThresholdMarkers = int.MaxValue, float a_customMargin = -1f,
-        bool a_drawArrows = true, bool a_doTooltip = true, Rect? rectForTooltip = null)
+        bool a_drawArrows = true, bool a_doTooltip = true, Rect? rectForTooltip = null, bool drawLabel = true)
     {
         if (threshPercents == null)
         {
