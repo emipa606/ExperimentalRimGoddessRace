@@ -23,7 +23,7 @@ public class HolyFireAbility : GoddessAbility
             return false;
         }
 
-        a_currentTarget.Pawn.TryAttachFire(1f);
+        a_currentTarget.Pawn.TryAttachFire(1f, pawn);
         Find.BattleLog.Add(new BattleLogEntry_GoddessAbilityUsed(pawn, a_currentTarget.Thing, def,
             RulePackDefOf.Event_AbilityUsed));
         return true;

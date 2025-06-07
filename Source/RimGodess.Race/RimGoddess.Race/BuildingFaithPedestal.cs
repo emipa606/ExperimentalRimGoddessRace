@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using RimGoddess.Base;
 using RimWorld;
 using RimWorld.Planet;
@@ -321,7 +322,7 @@ public class BuildingFaithPedestal : Building
                 List<Pawn> list2 = null;
                 if (owner2.MapHeld != null)
                 {
-                    list2 = owner2.MapHeld.mapPawns.AllPawnsSpawned;
+                    list2 = owner2.MapHeld.mapPawns.AllPawnsSpawned.ToList();
                 }
                 else if (owner2.IsCaravanMember())
                 {

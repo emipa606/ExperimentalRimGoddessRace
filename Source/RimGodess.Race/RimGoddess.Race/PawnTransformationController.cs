@@ -152,7 +152,7 @@ public class PawnTransformationController : IExposable
 
             LongEventHandler.ExecuteWhenFinished(delegate
             {
-                m_pawn.Drawer.renderer.graphics.ResolveApparelGraphics();
+                m_pawn.Drawer.renderer.SetAllGraphicsDirty();
                 foreach (var item3 in m_pawn.apparel.WornApparel)
                 {
                     if (item3 is ITransformable transformable)

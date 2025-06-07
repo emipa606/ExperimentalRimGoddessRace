@@ -1,5 +1,13 @@
 {
   "Continued": true,
   "CanAdd": "0",
-  "CanRemove": "2"
+  "CanRemove": "2",
+  "SocialImageSet": true,
+  "SearchTags": [
+    " religion",
+    " faith",
+    " goddess"
+  ],
+  "LastXmlCleaning": "2025-06-07T22:35:43.8754945+02:00",
+  "PreviewVersion": "1.4"
 }

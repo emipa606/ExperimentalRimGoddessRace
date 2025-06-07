@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <RTN_Translation_CommandTransformLabel>Transform</RTN_Translation_CommandTransformLabel>
   <RTN_Translation_CommandTransformDesc>Transforms the user into their Goddess form providing a buff to the pawn at the cost of Faith.</RTN_Translation_CommandTransformDesc>

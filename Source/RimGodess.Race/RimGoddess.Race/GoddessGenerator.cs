@@ -174,18 +174,18 @@ public class GoddessGenerator : IGPawnGenerator
         {
             foreach (var item2 in item.skillGains)
             {
-                if (item2.Key == a_sk)
+                if (item2.skill == a_sk)
                 {
-                    num += item2.Value * Rand.Range(1f, 1.4f);
+                    num += item2.amount * Rand.Range(1f, 1.4f);
                 }
             }
         }
 
         foreach (var trait in a_pawn.story.traits.allTraits)
         {
-            if (trait.CurrentData.skillGains.TryGetValue(a_sk, out var value))
+            if (trait.CurrentData.skillGains.Any(gain => gain.skill == a_sk))
             {
-                num += value;
+                num += trait.CurrentData.skillGains.First(gain => gain.skill == a_sk).amount;
             }
         }
 

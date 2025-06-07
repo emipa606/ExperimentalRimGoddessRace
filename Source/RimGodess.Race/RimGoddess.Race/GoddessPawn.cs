@@ -124,7 +124,7 @@ public class GoddessPawn : Pawn, IGPawn
                 BodyType = Rand.Value < 0.5f ? BodyTypeDefOf.Female : BodyTypeDefOf.Thin,
                 Hair = PawnStyleItemChooser.RandomHairFor(this),
                 HairColor = PawnHairColors.RandomHairColor(this, story.SkinColor, ageTracker.AgeBiologicalYears),
-                HeadGraphicPath = story.headType.GetGraphic(story.SkinColor).GraphicPath,
+                HeadGraphicPath = story.headType.GetGraphic(this, story.SkinColor).GraphicPath,
                 PawnStyleDef = null
             };
         }
@@ -182,7 +182,7 @@ public class GoddessPawn : Pawn, IGPawn
                 BodyType = Rand.Value < 0.5f ? BodyTypeDefOf.Female : BodyTypeDefOf.Thin,
                 Hair = PawnStyleItemChooser.RandomHairFor(this),
                 HairColor = GoddessDescriptionGenerator.GetColor(text),
-                HeadGraphicPath = story.headType.GetGraphic(story.SkinColor).GraphicPath
+                HeadGraphicPath = story.headType.GetGraphic(this, story.SkinColor).GraphicPath
             };
             if (Rand.Chance(0.25f))
             {
@@ -228,43 +228,46 @@ public class GoddessPawn : Pawn, IGPawn
         story.bodyType = a_details.BodyType;
         story.hairDef = a_details.Hair;
         story.HairColor = a_details.HairColor;
-        Drawer.renderer.graphics.ResolveAllGraphics();
+        Drawer.renderer.SetAllGraphicsDirty();
         if (a_details.PawnStyleDef != null)
         {
-            var pawnStyleDef = a_details.PawnStyleDef;
-            pawnStyleDef.headGraphic.color = story.SkinColor;
-            pawnStyleDef.headGraphic.colorTwo = TransformedColor;
-            pawnStyleDef.headGraphic.CopyFrom(pawnStyleDef.headGraphic);
-            Drawer.renderer.graphics.headGraphic = pawnStyleDef.headGraphic.Graphic;
-            pawnStyleDef.headGraphic.color = PawnGraphicSet.RottingColorDefault;
-            pawnStyleDef.headGraphic.colorTwo = TransformedColor;
-            pawnStyleDef.headGraphic.CopyFrom(pawnStyleDef.headGraphic);
-            Drawer.renderer.graphics.desiccatedHeadGraphic = pawnStyleDef.headGraphic.Graphic;
-            if (story.bodyType == BodyTypeDefOf.Female && pawnStyleDef.femaleBodyGraphic != null)
-            {
-                pawnStyleDef.femaleBodyGraphic.color = story.SkinColor;
-                pawnStyleDef.femaleBodyGraphic.colorTwo = TransformedColor;
-                pawnStyleDef.femaleBodyGraphic.CopyFrom(pawnStyleDef.femaleBodyGraphic);
-                Drawer.renderer.graphics.nakedGraphic = pawnStyleDef.femaleBodyGraphic.Graphic;
-                pawnStyleDef.femaleBodyGraphic.color = PawnGraphicSet.RottingColorDefault;
-                pawnStyleDef.femaleBodyGraphic.colorTwo = TransformedColor;
-                pawnStyleDef.femaleBodyGraphic.CopyFrom(pawnStyleDef.femaleBodyGraphic);
-                Drawer.renderer.graphics.dessicatedGraphic = pawnStyleDef.femaleBodyGraphic.Graphic;
-            }
-            else if (pawnStyleDef.thinBodyGraphic != null)
-            {
-                pawnStyleDef.thinBodyGraphic.color = story.SkinColor;
-                pawnStyleDef.thinBodyGraphic.colorTwo = TransformedColor;
-                pawnStyleDef.thinBodyGraphic.CopyFrom(pawnStyleDef.thinBodyGraphic);
-                Drawer.renderer.graphics.nakedGraphic = pawnStyleDef.thinBodyGraphic.Graphic;
-                pawnStyleDef.thinBodyGraphic.color = PawnGraphicSet.RottingColorDefault;
-                pawnStyleDef.thinBodyGraphic.colorTwo = TransformedColor;
-                pawnStyleDef.thinBodyGraphic.CopyFrom(pawnStyleDef.thinBodyGraphic);
-                Drawer.renderer.graphics.dessicatedGraphic = pawnStyleDef.thinBodyGraphic.Graphic;
-            }
+            a_other.PawnStyleDef = a_details.PawnStyleDef;
+            //var pawnStyleDef = a_details.PawnStyleDef;
+            //pawnStyleDef
+            //pawnStyleDef.headGraphic.color = story.SkinColor;
+            //pawnStyleDef.headGraphic.colorTwo = TransformedColor;
+            //pawnStyleDef.headGraphic.CopyFrom(pawnStyleDef.headGraphic);
+            //Drawer..HeadGraphic = pawnStyleDef.headGraphic.Graphic;
+            //pawnStyleDef.headGraphic.color = PawnGraphicSet.RottingColorDefault;
+            //pawnStyleDef.headGraphic.colorTwo = TransformedColor;
+            //pawnStyleDef.headGraphic.CopyFrom(pawnStyleDef.headGraphic);
+            //Drawer.renderer.graphics.desiccatedHeadGraphic = pawnStyleDef.headGraphic.Graphic;
+            //if (story.bodyType == BodyTypeDefOf.Female && pawnStyleDef.femaleBodyGraphic != null)
+            //{
+            //    pawnStyleDef.femaleBodyGraphic.color = story.SkinColor;
+            //    pawnStyleDef.femaleBodyGraphic.colorTwo = TransformedColor;
+            //    pawnStyleDef.femaleBodyGraphic.CopyFrom(pawnStyleDef.femaleBodyGraphic);
+            //    Drawer.renderer.graphics.nakedGraphic = pawnStyleDef.femaleBodyGraphic.Graphic;
+            //    pawnStyleDef.femaleBodyGraphic.color = PawnGraphicSet.RottingColorDefault;
+            //    pawnStyleDef.femaleBodyGraphic.colorTwo = TransformedColor;
+            //    pawnStyleDef.femaleBodyGraphic.CopyFrom(pawnStyleDef.femaleBodyGraphic);
+            //    Drawer.renderer.graphics.dessicatedGraphic = pawnStyleDef.femaleBodyGraphic.Graphic;
+            //}
+            //else if (pawnStyleDef.thinBodyGraphic != null)
+            //{
+            //    pawnStyleDef.thinBodyGraphic.color = story.SkinColor;
+            //    pawnStyleDef.thinBodyGraphic.colorTwo = TransformedColor;
+            //    pawnStyleDef.thinBodyGraphic.CopyFrom(pawnStyleDef.thinBodyGraphic);
+            //    Drawer.renderer.graphics.nakedGraphic = pawnStyleDef.thinBodyGraphic.Graphic;
+            //    pawnStyleDef.thinBodyGraphic.color = PawnGraphicSet.RottingColorDefault;
+            //    pawnStyleDef.thinBodyGraphic.colorTwo = TransformedColor;
+            //    pawnStyleDef.thinBodyGraphic.CopyFrom(pawnStyleDef.thinBodyGraphic);
+            //    Drawer.renderer.graphics.dessicatedGraphic = pawnStyleDef.thinBodyGraphic.Graphic;
+            //}
         }
         else
         {
+            
             Drawer.renderer.graphics.headGraphic =
                 story.headType.GetGraphic(story.SkinColor, false, story.SkinColorOverriden);
             Drawer.renderer.graphics.desiccatedHeadGraphic =

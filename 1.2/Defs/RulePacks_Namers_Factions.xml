@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <RulePackDef>
     <defName>RTN_RulePackDef_NamerFactionGoddess</defName>
@@ -7,12 +7,12 @@
     </include>
     <rulePack>
       <rulesFiles>
-        <li>celestial_cpu-&gt;Names/Celestial</li>
-        <li>place_endings-&gt;WordParts/PlaceEndings</li>
+        <li>celestial_cpu->Names/Celestial</li>
+        <li>place_endings->WordParts/PlaceEndings</li>
       </rulesFiles>
       <rulesStrings>
-        <li>r_name(p=3)-&gt;[nearnameinitial]</li>
-        <li>r_name-&gt;[celestial_cpu][place_endings]</li>
+        <li>r_name(p=3)->[nearnameinitial]</li>
+        <li>r_name->[celestial_cpu][place_endings]</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>
